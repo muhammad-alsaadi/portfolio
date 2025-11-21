@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Company Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>بورتفوليو الشركة</h1>
+      <p>خدمات احترافية في مونتاج الفيديو، التصميم الجرافيكي، تطبيقات الذكاء الصناعي، والنمذجة ثلاثية الأبعاد.</p>
+      <div class="header-tags">
+        <span class="tag">Video Editing • Reels • Ads</span>
+        <span class="tag">Graphic Design • Branding</span>
+        <span class="tag">AI Tools & Automation</span>
+        <span class="tag">3D Modeling & Renders</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="block video-block">
+        <div class="block-header">
+          <div>
+            <h2><span class="accent-dot"></span> الفيديو التعريفي</h2>
+            <div class="block-subtitle">نبذة مرئية سريعة عن أسلوب العمل والنتائج التي نقدمها للعملاء.</div>
+          </div>
+          <span class="pill">1 دقيقة تركّز على القيمة</span>
+        </div>
+        <div class="video-frame">
+          <video id="introVideo" controls>
+            
+            متصفحك لا يدعم عرض الفيديو.
+          </video>
+        </div>
+      </section>
+
+      <section class="block about">
+        <div class="block-header">
+          <div>
+            <h2><span class="accent-dot"></span> من نحن</h2>
+            <div class="block-subtitle">فريق إبداعي واحد، أربع مهارات عميقة.</div>
+          </div>
+        </div>
+        <p>
+          نحن ستوديو رقمي متخصص في تحويل أفكارك إلى صور، فيديوهات، نماذج ثلاثية الأبعاد، وأدوات ذكاء صناعي تعمل لصالح مشروعك.
+          نركز على الجودة العالية، التفاصيل الدقيقة، وتجربة مستخدم تجعل علامتك تظهر بمستوى أعلى من المنافسين.
+        </p>
+      </section>
+
+      <section class="block services-block">
+        <div class="block-header">
+          <div>
+            <h2><span class="accent-dot"></span> خدماتنا</h2>
+            <div class="block-subtitle">اختر الخدمة التي تناسب مشروعك، واستعرض أعمالاً حقيقية لكل قسم.</div>
+          </div>
+        </div>
+
+        <div class="services-list">
+          <div class="card">
+            <div class="card-icon">🎬</div>
+            <h3>تحرير الفيديو</h3>
+            <p>مونتاج احترافي للإعلانات، الريلز، الفيديوهات التعليمية، وتحسين جودة المواد المصوّرة.</p>
+            <a class="btn-primary" href="video-editing.html">
+              استعراض أعمال الفيديو <span class="chevron">↗</span>
+            </a>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🎨</div>
+            <h3>التصميم الجرافيكي</h3>
+            <p>تصميم بوستات السوشال ميديا، الشعارات، الهويات البصرية، المطبوعات والعروض التقديمية.</p>
+            <a class="btn-primary" href="graphic-design.html">
+              استعراض أعمال الجرافيك <span class="chevron">↗</span>
+            </a>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🤖</div>
+            <h3>تطبيقات الذكاء الصناعي</h3>
+            <p>بناء أدوات ذكية مخصّصة، أتمتة مهام، ونظم تحليل تساعدك على تسريع العمل واتخاذ قرارات أفضل.</p>
+            <a class="btn-primary" href="ai-apps.html">
+              استعراض مشاريع الذكاء الصناعي <span class="chevron">↗</span>
+            </a>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🧊</div>
+            <h3>النمذجة ثلاثية الأبعاد</h3>
+            <p>نماذج ثلاثية الأبعاد للمنتجات، المباني، الشخصيات، والرندرات الواقعية لعرض أفكارك بشكل بصري قوي.</p>
+            <a class="btn-primary" href="3d-modeling.html">
+              استعراض أعمال 3D <span class="chevron">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="block contact-block">
+        <div class="block-header">
+          <div>
+            <h2><span class="accent-dot"></span> تواصل معنا</h2>
+            <div class="block-subtitle">احكِ لنا عن مشروعك، وسنقترح عليك أفضل صيغة عمل وميزانية مناسبة.</div>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="field-group">
+                <label>الاسم الكامل</label>
+                <input name="name" type="text" placeholder="اكتب اسمك هنا" required />
+              </div>
+              <div class="field-group">
+                <label>رقم الهاتف</label>
+                <input name="phone" type="text" placeholder="مثال: +966..." required />
+              </div>
+              <div class="field-group">
+                <label>البريد الإلكتروني</label>
+                <input name="email" type="email" placeholder="email@example.com" required />
+              </div>
+              <div class="field-group">
+                <label>وصف المشروع أو المشكلة</label>
+                <textarea name="description" placeholder="صف لنا ما الذي تحتاجه بالضبط..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary btn-submit">إرسال الطلب</button>
+            </form>
+          </div>
+
+          <aside class="contact-aside">
+            <strong>تريد ردًا سريعًا؟</strong>
+            <p>
+              يمكنك مراسلتنا مباشرة عبر واتساب، وإرسال أمثلة أو ملفات أو أفكار أولية لنبدأ من حيث أنت الآن.
+            </p>
+            <a class="whatsapp-btn" href="https://wa.link/xwdggq" target="_blank">راسلنا عبر واتساب</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    © 2025 جميع الحقوق محفوظة — Syrian Hands
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
