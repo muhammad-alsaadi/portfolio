@@ -39,14 +39,15 @@ async function loadProjects() {
     card.className = "project-card";
 
     card.innerHTML = `
-      ${
-        p.thumbnail_url
-          ? `<img class="thumb" src="${p.thumbnail_url}" alt="thumbnail">`
-          : `<div class="no-thumb">No Thumbnail</div>`
-      }
-
-      <h3>${p.title}</h3>
-      <p>${p.short_description}</p>
+      <div class="project-header-block">
+        ${
+          p.thumbnail_url
+            ? `<img class="thumb" src="${p.thumbnail_url}" alt="thumbnail">`
+            : `<div class="no-thumb">No Thumbnail</div>`
+        }
+        <h3>${p.title}</h3>
+        <p>${p.short_description}</p>
+      </div>
 
       <div class="btn-row">
         <button class="btn-primary" onclick="editProject('${p.id}')">تعديل</button>
@@ -58,7 +59,10 @@ async function loadProjects() {
         <a class="btn-secondary" href="project.html?pid=${p.id}" target="_blank">عرض المشروع</a>
       </div>
 
-      <div id="files-${p.id}" class="file-list"></div>
+      <div class="project-files-wrapper">
+        <h4 class="files-title">ملفات المشروع</h4>
+        <div id="files-${p.id}" class="project-files-grid"></div>
+      </div>
     `;
 
     projectList.appendChild(card);
@@ -66,6 +70,7 @@ async function loadProjects() {
     loadProjectFiles(p.id);
   });
 }
+
 
 /* -------------------------------------
    تنظيف اسم الملف
