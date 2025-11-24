@@ -71,13 +71,18 @@ async function loadGallery() {
     box.className = "gallery-item";
 
     if (file.file_type === "video") {
-      box.innerHTML = `
-        <video controls>
-          <source src="${file.file_url}" type="video/mp4">
-        </video>`;
-    } else {
-      box.innerHTML = `<img src="${file.file_url}" alt="project media" />`;
-    }
+  box.innerHTML = `
+    <video 
+      controls 
+      controlsList="nodownload" 
+      oncontextmenu="return false"
+    >
+      <source src="${file.file_url}" type="video/mp4">
+    </video>`;
+} else {
+  box.innerHTML = `<img src="${file.file_url}" alt="project media" />`;
+}
+
 
     galleryEl.appendChild(box);
   });
@@ -85,3 +90,4 @@ async function loadGallery() {
 
 // تشغيل
 loadProject();
+
