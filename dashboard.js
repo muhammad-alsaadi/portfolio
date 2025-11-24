@@ -195,8 +195,19 @@ async function loadProjectFiles(projectId) {
   const container = document.getElementById(`files-${projectId}`);
   if (!container) return;
 
-  container.innerHTML = `<p style="color:#999">تحميل...</p>`;
+  // نجهّز الكارد
+  container.innerHTML = `
+    <div class="project-files-card">
+      <h4 style="margin:0 0 10px 0; color:#7cc;">ملفات المشروع</h4>
+      <div class="project-files-grid" id="grid-${projectId}">
+        <p style="color:#999">جاري التحميل...</p>
+      </div>
+    </div>
+  `;
 
+  const grid = document.getElementById(`grid-${projectId}`);
+
+  // جلب الملفات من Supabase
   const { data } = await supabase
     .from("project_files")
     .select("*")
@@ -204,15 +215,15 @@ async function loadProjectFiles(projectId) {
     .order("created_at", { ascending: false });
 
   if (!data || data.length === 0) {
-    container.innerHTML = "<p style='color:#666'>لا توجد ملفات</p>";
+    grid.innerHTML = "<p style='color:#666'>لا توجد ملفات</p>";
     return;
   }
 
-  container.innerHTML = "";
+  grid.innerHTML = "";
 
+  // عرض الملفات داخل الكارد
   data.forEach((f) => {
     const item = document.createElement("div");
-    item.className = "file-item";
 
     item.innerHTML = `
       ${
@@ -228,7 +239,7 @@ async function loadProjectFiles(projectId) {
       </button>
     `;
 
-    container.appendChild(item);
+    grid.appendChild(item);
   });
 }
 
