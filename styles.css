@@ -531,3 +531,26 @@ footer {
   display: block;
   margin-bottom: 10px;
 }
+.project-files-card {
+  background: #0d1628dd;
+  padding: 18px;
+  margin-top: 15px;
+  border-radius: 16px;
+  border: 1px solid rgba(148,163,184,0.35);
+}
+
+.project-files-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.project-files-grid img,
+.project-files-grid video {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,184,0.35);
+}
