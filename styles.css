@@ -495,3 +495,28 @@ footer {
   min-height: 40px;
   padding: 10px 0;
 }
+.file-item {
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 260px;   /* ثابت، يمنع التمدد */
+}
+
+.file-item img,
+.file-item video {
+  width: 100%;
+  max-height: 160px;   /* يمنع الطول الزائد */
+  object-fit: cover;    /* قص ذكي */
+  border-radius: 10px;
+}
+.file-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 15px;
+}
