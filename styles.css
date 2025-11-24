@@ -521,3 +521,13 @@ footer {
   flex-wrap: wrap;
   gap: 12px;
 }
+/* ===== ضبط حجم الثامبنيل داخل كارد المشروع ===== */
+.project-card .thumb {
+  width: 100%;
+  max-width: 250px;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 10px;
+}
